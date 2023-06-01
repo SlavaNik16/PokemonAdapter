@@ -33,7 +33,7 @@ class PokemonAdapter() : RecyclerView.Adapter<PokemonAdapter.PokemonViewHolder>(
 
     override fun onBindViewHolder(holder: PokemonViewHolder, position: Int) {
         holder.txtId.text = pokemonList.get(position).getId().toString()
-        var imageId:Int =  context.resources.getIdentifier(pokemonList.get(position).getImg(),"drawable",context.packageName)
+        var imageId:Int =  context.resources.getIdentifier("pok_0"+pokemonList.get(position).getImg(),"drawable",context.packageName)
         holder.txtImg.setImageResource(imageId)
         holder.txtTitle.text = pokemonList.get(position).getName()
     }
